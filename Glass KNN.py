@@ -6,7 +6,7 @@ from sklearn.metrics import classification_report, confusion_matrix
 dataset = r'Glass.csv'
 data = pd.read_csv(dataset, sep=',')
 y = data.Type
-x = data.drop('Type', axis=1)
+x = data.drop({'ID','Type'}, axis=1)
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
 classification = KNeighborsClassifier(7)
 classification.fit(x_train, y_train)
