@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import classification_report, confusion_matrix
-dataset = r'Example.csv'
+dataset = r'Glass.csv'
 data = pd.read_csv(dataset, sep=',')
 y = data.Type
 x = data.drop('Type', axis=1)
